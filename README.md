@@ -34,7 +34,9 @@ node scripts/build-prompt.cjs --check
 node --test
 ```
 
-PROMPT.md is authoritative; regenerate prompt-data.js after editing it. The generated copy makes local-file exports work without a fetch. Tests cover packet and wizard behavior, not whether an external AI will follow instructions. GitHub Pages serves main from the repository root; verify the deployed commit and live wizard after publishing.
+PROMPT.md is authoritative; regenerate prompt-data.js after editing it. The generated copy makes local-file exports work without a fetch. Tests cover packet and wizard behavior, not whether an external AI will follow instructions.
+
+GitHub Pages uses the custom GitHub Actions workflow in `.github/workflows/pages.yml`. Every push to main and pull request targeting main runs regression tests, then checks protocol consistency without regenerating the bundle. A failure blocks the artifact upload and deployment. Only a successful main run can deploy the artifact checked by that same run; pull requests validate without publishing. Keep Settings → Pages → Source set to **GitHub Actions**, so automatic branch publishing cannot bypass these checks. Verify the deployed commit and live wizard after publishing.
 
 ## Files
 - `index.html` — intake wizard
