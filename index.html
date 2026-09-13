@@ -289,6 +289,8 @@
   </aside>
   <main>
     <div class="meter"><span id="meter"></span></div>
+    <p id="storageStatus" role="status" class="warn"></p>
+    <noscript>This optional wizard needs JavaScript. Read <a href="PROMPT.md">the standalone AI protocol</a> instead.</noscript>
     <div id="screen"></div>
     <div class="footer">
       <button class="ghost" onclick="stepPrev()">Back</button>
@@ -308,8 +310,9 @@
     </div>
     <div class="bboi-move"></div>
   </div>
-  <script src="wizard-data.js?v=10"></script>
-  <script src="wizard-app.js?v=10"></script>
+  <script src="wizard-data.js?v=3"></script>
+  <script src="prompt-data.js?v=3"></script>
+  <script src="wizard-app.js?v=3"></script>
   <script>
     (function () {
       var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

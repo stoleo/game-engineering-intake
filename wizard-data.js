@@ -83,6 +83,12 @@ const STEPS = [
     ["techRisk","Tech risks","textarea",""]
   ]},
   { id: "planning", title: "Planning bounds", fields: [
+    ["threshold","Improvement threshold","select","Blockers only|Big wins|Meaningful refinement|Fine polish"],
+    ["worthwhile","Minimum worthwhile outcome","textarea","What noticeable player or development result would justify the work?"],
+    ["assessmentBudget","Assessment budget","text","Time, compute and spend cap. Unspecified means one focused read-only pass."],
+    ["implementationScope","Implementation authorization and scope","textarea","Plan only by default. Record existing chat authorization; this form does not grant permission."],
+    ["implementationBudget","Separate implementation budget","text","Time, compute, spend; include an explicit polish cap if selecting Fine polish."],
+    ["maxActions","Maximum qualifying actions","text","Optional ceiling, never a quota. Zero qualifying actions is valid."],
     ["capacity","Capacity 2 / 4 / 12 weeks","textarea",""],
     ["sizeS","S means","text",""],
     ["sizeM","M means","text",""],
